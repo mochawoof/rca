@@ -30,11 +30,11 @@ namespace rca
             usingcmd = !usingcmd;
             if (usingcmd)
             {
-                usingCmdToolStripMenuItem.Text = "Using CMD";
+                usingCmdToolStripMenuItem.Text = "Using cmd";
             }
             else
             {
-                usingCmdToolStripMenuItem.Text = "Using Powershell";
+                usingCmdToolStripMenuItem.Text = "Using powershell";
             }
         }
 
