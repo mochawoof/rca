@@ -114,8 +114,9 @@
             // port0ToolStripMenuItem
             // 
             port0ToolStripMenuItem.Name = "port0ToolStripMenuItem";
-            port0ToolStripMenuItem.Size = new Size(50, 20);
-            port0ToolStripMenuItem.Text = "Port 0";
+            port0ToolStripMenuItem.Size = new Size(74, 20);
+            port0ToolStripMenuItem.Text = "Port 65535";
+            port0ToolStripMenuItem.Click += port0ToolStripMenuItem_Click;
             // 
             // getIPConfigToolStripMenuItem
             // 
