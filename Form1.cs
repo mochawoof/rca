@@ -45,7 +45,7 @@ namespace rca
 
         private void aboutRCA1ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(this, "RCA version 1.\n\nThis software is freely available at https://github.com/mochawoof/rca.", "About RCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show(this, "Remote Control Application version 1.\n\nThis software is freely available at https://github.com/mochawoof/rca.", "About RCA", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
