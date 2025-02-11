@@ -9,8 +9,11 @@ namespace rca
             InitializeComponent();
         }
 
+        private int MINPORT = 1;
+        private int MAXPORT = 65534;
+
         private Boolean usingcmd = true;
-        private int port = 65535;
+        private int port = 65534;
 
         private void getIPConfigToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -51,14 +54,14 @@ namespace rca
 
         private void port0ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            string so = Microsoft.VisualBasic.Interaction.InputBox("Enter a port number from 1-65535. Make sure it is forwarded and not in use.", "Prompt", port + "", 0, 0);
+            string so = Microsoft.VisualBasic.Interaction.InputBox("Enter a port number from " + MINPORT + "-" + MAXPORT + ". Make sure it is forwarded and not in use.", "Prompt", port + "", 0, 0);
             if (so != null && so.Trim() != "")
             {
                 Boolean fail = false;
                 try
                 {
                     int o = Convert.ToInt32(so);
-                    if (o >= 1 && o <= 65535)
+                    if (o >= MINPORT && o <= MAXPORT)
                     {
                         port = o;
                         port0ToolStripMenuItem.Text = "Port " + port;
@@ -74,7 +77,7 @@ namespace rca
 
                 if (fail)
                 {
-                    MessageBox.Show("Port must be a number from 1-65535!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Port must be a number from " + MINPORT + "-" + MAXPORT + "!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
