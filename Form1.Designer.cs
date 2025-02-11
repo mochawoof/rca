@@ -68,6 +68,7 @@
             // textBox1
             // 
             textBox1.Dock = DockStyle.Fill;
+            textBox1.Font = new Font("Courier New", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(0, 0);
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
