@@ -32,8 +32,8 @@
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
-            receivingToolStripMenuItem = new ToolStripMenuItem();
-            sendingToolStripMenuItem = new ToolStripMenuItem();
+            openToolStripMenuItem = new ToolStripMenuItem();
+            controllingToolStripMenuItem = new ToolStripMenuItem();
             port0ToolStripMenuItem = new ToolStripMenuItem();
             getIPConfigToolStripMenuItem = new ToolStripMenuItem();
             clearConsoleToolStripMenuItem = new ToolStripMenuItem();
@@ -73,27 +73,27 @@
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { receivingToolStripMenuItem, sendingToolStripMenuItem, port0ToolStripMenuItem, getIPConfigToolStripMenuItem, clearConsoleToolStripMenuItem, hideConsoleToolStripMenuItem, usingCmdToolStripMenuItem, aboutRCA1ToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { openToolStripMenuItem, controllingToolStripMenuItem, port0ToolStripMenuItem, getIPConfigToolStripMenuItem, clearConsoleToolStripMenuItem, hideConsoleToolStripMenuItem, usingCmdToolStripMenuItem, aboutRCA1ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
-            // receivingToolStripMenuItem
+            // openToolStripMenuItem
             // 
-            receivingToolStripMenuItem.Image = Properties.Resources.red;
-            receivingToolStripMenuItem.Name = "receivingToolStripMenuItem";
-            receivingToolStripMenuItem.Size = new Size(109, 20);
-            receivingToolStripMenuItem.Text = "Not Receiving";
+            openToolStripMenuItem.Image = Properties.Resources.red;
+            openToolStripMenuItem.Name = "openToolStripMenuItem";
+            openToolStripMenuItem.Size = new Size(87, 20);
+            openToolStripMenuItem.Text = "Not Open";
             // 
-            // sendingToolStripMenuItem
+            // controllingToolStripMenuItem
             // 
-            sendingToolStripMenuItem.BackColor = SystemColors.Control;
-            sendingToolStripMenuItem.Image = Properties.Resources.red;
-            sendingToolStripMenuItem.Name = "sendingToolStripMenuItem";
-            sendingToolStripMenuItem.Size = new Size(101, 20);
-            sendingToolStripMenuItem.Text = "Not Sending";
+            controllingToolStripMenuItem.BackColor = SystemColors.Control;
+            controllingToolStripMenuItem.Image = Properties.Resources.red;
+            controllingToolStripMenuItem.Name = "controllingToolStripMenuItem";
+            controllingToolStripMenuItem.Size = new Size(118, 20);
+            controllingToolStripMenuItem.Text = "Not Controlling";
             // 
             // port0ToolStripMenuItem
             // 
@@ -181,8 +181,8 @@
         private TextBox textBox1;
         private MenuStrip menuStrip1;
         private PictureBox pictureBox1;
-        private ToolStripMenuItem receivingToolStripMenuItem;
-        private ToolStripMenuItem sendingToolStripMenuItem;
+        private ToolStripMenuItem openToolStripMenuItem;
+        private ToolStripMenuItem controllingToolStripMenuItem;
         private ToolStripMenuItem port0ToolStripMenuItem;
         private ToolStripMenuItem getIPConfigToolStripMenuItem;
         private ToolStripMenuItem usingCmdToolStripMenuItem;
