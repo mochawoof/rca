@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            splitContainer1 = new SplitContainer();
             textBox1 = new TextBox();
             pictureBox1 = new PictureBox();
             menuStrip1 = new MenuStrip();
@@ -38,32 +37,17 @@
             port0ToolStripMenuItem = new ToolStripMenuItem();
             getIPConfigToolStripMenuItem = new ToolStripMenuItem();
             clearConsoleToolStripMenuItem = new ToolStripMenuItem();
+            hideConsoleToolStripMenuItem = new ToolStripMenuItem();
             usingCmdToolStripMenuItem = new ToolStripMenuItem();
             aboutRCA1ToolStripMenuItem = new ToolStripMenuItem();
+            splitContainer1 = new SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)splitContainer1).BeginInit();
             splitContainer1.Panel1.SuspendLayout();
             splitContainer1.Panel2.SuspendLayout();
             splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            menuStrip1.SuspendLayout();
             SuspendLayout();
-            // 
-            // splitContainer1
-            // 
-            splitContainer1.Dock = DockStyle.Fill;
-            splitContainer1.Location = new Point(0, 24);
-            splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            splitContainer1.Panel1.Controls.Add(textBox1);
-            // 
-            // splitContainer1.Panel2
-            // 
-            splitContainer1.Panel2.Controls.Add(pictureBox1);
-            splitContainer1.Size = new Size(800, 426);
-            splitContainer1.SplitterDistance = 266;
-            splitContainer1.TabIndex = 0;
             // 
             // textBox1
             // 
@@ -73,7 +57,7 @@
             textBox1.Multiline = true;
             textBox1.Name = "textBox1";
             textBox1.ScrollBars = ScrollBars.Both;
-            textBox1.Size = new Size(266, 426);
+            textBox1.Size = new Size(203, 426);
             textBox1.TabIndex = 0;
             textBox1.Text = "Welcome to RCA 1!";
             // 
@@ -83,13 +67,13 @@
             pictureBox1.Dock = DockStyle.Fill;
             pictureBox1.Location = new Point(0, 0);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(530, 426);
+            pictureBox1.Size = new Size(593, 426);
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { receivingToolStripMenuItem, sendingToolStripMenuItem, port0ToolStripMenuItem, getIPConfigToolStripMenuItem, clearConsoleToolStripMenuItem, usingCmdToolStripMenuItem, aboutRCA1ToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { receivingToolStripMenuItem, sendingToolStripMenuItem, port0ToolStripMenuItem, getIPConfigToolStripMenuItem, clearConsoleToolStripMenuItem, hideConsoleToolStripMenuItem, usingCmdToolStripMenuItem, aboutRCA1ToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -132,6 +116,13 @@
             clearConsoleToolStripMenuItem.Text = "Clear Console";
             clearConsoleToolStripMenuItem.Click += clearConsoleToolStripMenuItem_Click;
             // 
+            // hideConsoleToolStripMenuItem
+            // 
+            hideConsoleToolStripMenuItem.Name = "hideConsoleToolStripMenuItem";
+            hideConsoleToolStripMenuItem.Size = new Size(90, 20);
+            hideConsoleToolStripMenuItem.Text = "Hide Console";
+            hideConsoleToolStripMenuItem.Click += hideConsoleToolStripMenuItem_Click;
+            // 
             // usingCmdToolStripMenuItem
             // 
             usingCmdToolStripMenuItem.Name = "usingCmdToolStripMenuItem";
@@ -146,6 +137,23 @@
             aboutRCA1ToolStripMenuItem.Text = "About RCA";
             aboutRCA1ToolStripMenuItem.Click += aboutRCA1ToolStripMenuItem_Click;
             // 
+            // splitContainer1
+            // 
+            splitContainer1.Dock = DockStyle.Fill;
+            splitContainer1.Location = new Point(0, 24);
+            splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            splitContainer1.Panel1.Controls.Add(textBox1);
+            // 
+            // splitContainer1.Panel2
+            // 
+            splitContainer1.Panel2.Controls.Add(pictureBox1);
+            splitContainer1.Size = new Size(800, 426);
+            splitContainer1.SplitterDistance = 203;
+            splitContainer1.TabIndex = 2;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -157,21 +165,19 @@
             MainMenuStrip = menuStrip1;
             Name = "Form1";
             Text = "RCA 1";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            menuStrip1.ResumeLayout(false);
+            menuStrip1.PerformLayout();
             splitContainer1.Panel1.ResumeLayout(false);
             splitContainer1.Panel1.PerformLayout();
             splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)splitContainer1).EndInit();
             splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            menuStrip1.ResumeLayout(false);
-            menuStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private SplitContainer splitContainer1;
         private TextBox textBox1;
         private MenuStrip menuStrip1;
         private PictureBox pictureBox1;
@@ -182,5 +188,7 @@
         private ToolStripMenuItem usingCmdToolStripMenuItem;
         private ToolStripMenuItem clearConsoleToolStripMenuItem;
         private ToolStripMenuItem aboutRCA1ToolStripMenuItem;
+        private ToolStripMenuItem hideConsoleToolStripMenuItem;
+        private SplitContainer splitContainer1;
     }
 }

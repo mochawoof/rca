@@ -65,7 +65,8 @@ namespace rca
                     {
                         port = o;
                         port0ToolStripMenuItem.Text = "Port " + port;
-                    } else
+                    }
+                    else
                     {
                         fail = true;
                     }
@@ -79,6 +80,19 @@ namespace rca
                 {
                     MessageBox.Show("Port must be a number from " + MINPORT + "-" + MAXPORT + "!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+            }
+        }
+
+        private void hideConsoleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (splitContainer1.Panel1Collapsed == false)
+            {
+                splitContainer1.Panel1Collapsed = true;
+                hideConsoleToolStripMenuItem.Text = "Show Console";
+            } else
+            {
+                splitContainer1.Panel1Collapsed = false;
+                hideConsoleToolStripMenuItem.Text = "Hide Console";
             }
         }
     }
